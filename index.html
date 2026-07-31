@@ -7,6 +7,15 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f8f5; color: #2e4d32; text-align: center; }
         header { background-color: #2e7d32; color: white; padding: 2rem; }
+        
+        /* --- ADDED THIS FOR LOGO STYLING --- */
+        .logo {
+            max-width: 120px; /* Adjust size as needed */
+            height: auto;
+            border-radius: 50%; /* Makes circular logo; remove this line if your logo is rectangular */
+            margin-bottom: 10px;
+        }
+
         .container { padding: 2rem; }
         .plant-card { background: white; border-radius: 8px; padding: 1rem; margin: 1rem auto; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .button { display: inline-block; padding: 0.8rem 1.5rem; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
@@ -15,6 +24,9 @@
 <body>
 
     <header>
+        <!-- --- ADDED LOGO IMAGE HERE --- -->
+        <img src="logo.png" alt="Shree Ram Nursery Logo" class="logo">
+
         <h1>Welcome to Shree Ram Nursery</h1>
         <p>Your one-stop destination for healthy plants, pots, and gardening supplies.</p>
     </header>
