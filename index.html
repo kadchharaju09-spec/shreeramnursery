@@ -219,6 +219,11 @@
             background-color: #bbf7d0;
         }
 
+        .category-btn.active {
+            background-color: #16a34a;
+            color: white;
+        }
+
         /* Featured Plants */
         .featured-plants {
             background-color: #f9fafb;
@@ -571,12 +576,13 @@
         <div class="container">
             <h2 class="section-title">Shop by Category</h2>
             <div class="categories-grid">
-                <button class="category-btn">Indoor Plants</button>
-                <button class="category-btn">Outdoor Plants</button>
-                <button class="category-btn">Flowering Plants</button>
-                <button class="category-btn">Succulents</button>
-                <button class="category-btn">Herbs</button>
-                <button class="category-btn">Fruit Plants</button>
+                <button class="category-btn" data-category="all">All Plants</button>
+                <button class="category-btn" data-category="indoor">Indoor Plants</button>
+                <button class="category-btn" data-category="outdoor">Outdoor Plants</button>
+                <button class="category-btn" data-category="flowering">Flowering Plants</button>
+                <button class="category-btn" data-category="succulent">Succulents</button>
+                <button class="category-btn" data-category="herb">Herbs</button>
+                <button class="category-btn" data-category="fruit">Fruit Plants</button>
             </div>
         </div>
     </section>
@@ -586,7 +592,7 @@
         <div class="container">
             <h2 class="section-title">Featured Plants</h2>
             <div class="plants-grid">
-                <div class="plant-card">
+                <div class="plant-card" data-category="indoor">
                     <div class="plant-image">🌿</div>
                     <div class="plant-info">
                         <h3 class="plant-name">Plant Name</h3>
@@ -599,7 +605,7 @@
                         <a href="https://wa.me/917862925844?text=Hi%2C%20I%27m%20interested%20in%20Plant%20Name%20from%20Shree%20Ram%20Nursery.%20Could%20you%20share%20more%20details%3F" target="_blank" class="enquire-btn">Enquire Now</a>
                     </div>
                 </div>
-                <div class="plant-card">
+                <div class="plant-card" data-category="outdoor">
                     <div class="plant-image">🌱</div>
                     <div class="plant-info">
                         <h3 class="plant-name">Plant Name</h3>
@@ -612,7 +618,7 @@
                         <a href="https://wa.me/917862925844?text=Hi%2C%20I%27m%20interested%20in%20Plant%20Name%20from%20Shree%20Ram%20Nursery.%20Could%20you%20share%20more%20details%3F" target="_blank" class="enquire-btn">Enquire Now</a>
                     </div>
                 </div>
-                <div class="plant-card">
+                <div class="plant-card" data-category="flowering">
                     <div class="plant-image">🌻</div>
                     <div class="plant-info">
                         <h3 class="plant-name">Plant Name</h3>
@@ -635,7 +641,7 @@
             <h2 class="section-title">Fruit Plants</h2>
             <p class="fruit-plants-subtitle">Grow your own fresh fruits at home with our premium fruit-bearing plants</p>
             <div class="plants-grid">
-                <div class="plant-card">
+                <div class="plant-card" data-category="fruit">
                     <div class="plant-image">🍎</div>
                     <div class="plant-info">
                         <h3 class="plant-name">Plant Name</h3>
@@ -648,7 +654,7 @@
                         <a href="https://wa.me/917862925844?text=Hi%2C%20I%27m%20interested%20in%20Plant%20Name%20from%20Shree%20Ram%20Nursery.%20Could%20you%20share%20more%20details%3F" target="_blank" class="enquire-btn">Enquire Now</a>
                     </div>
                 </div>
-                <div class="plant-card">
+                <div class="plant-card" data-category="fruit">
                     <div class="plant-image">🍊</div>
                     <div class="plant-info">
                         <h3 class="plant-name">Plant Name</h3>
@@ -661,7 +667,7 @@
                         <a href="https://wa.me/917862925844?text=Hi%2C%20I%27m%20interested%20in%20Plant%20Name%20from%20Shree%20Ram%20Nursery.%20Could%20you%20share%20more%20details%3F" target="_blank" class="enquire-btn">Enquire Now</a>
                     </div>
                 </div>
-                <div class="plant-card">
+                <div class="plant-card" data-category="fruit">
                     <div class="plant-image">🍓</div>
                     <div class="plant-info">
                         <h3 class="plant-name">Plant Name</h3>
@@ -769,12 +775,47 @@
     </a>
 
     <script>
-        // Add staggered animation delays to plant cards
+        // Category filtering
         document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const plantCards = document.querySelectorAll('.plant-card');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const selectedCategory = this.getAttribute('data-category');
+                    
+                    // Remove active state from all buttons
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    // Add active state to clicked button
+                    this.classList.add('active');
+
+                    // Filter and show/hide plant cards
+                    plantCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+                            card.style.display = 'flex';
+                            card.style.animation = 'fadeIn 0.6s ease-out forwards';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    // Scroll to plants section
+                    document.getElementById('plants').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Add staggered animation delays to plant cards
             const cards = document.querySelectorAll('.plant-card');
             cards.forEach((card, index) => {
                 card.style.animationDelay = (0.1 * (index + 1)) + 's';
             });
+
+            // Set default active button
+            const allBtn = document.querySelector('[data-category="all"]');
+            if (allBtn) {
+                allBtn.classList.add('active');
+            }
         });
     </script>
 </body>
