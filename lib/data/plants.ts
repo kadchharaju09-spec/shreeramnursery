@@ -25,6 +25,18 @@ export const plants: Plant[] = [
     image: 'monstera',
   },
   {
+    id: "allamanda",
+    name: "Allamanda",
+    botanicalName: "Allamanda cathartica",
+    category: "flowering",
+    careLevel: "easy",
+    description: "Vibrant tropical flowering plant known for its bright yellow trumpet-shaped blooms.",
+    sunlight: "Full sun to bright indirect light",
+    watering: "Water regularly, keep soil moist",
+    benefits: ["Prolific bright blooms", "Great for sunny spots", "Low maintenance"],
+    imageUrl: "/images/plants/allamanda.png"
+  },
+  {
     id: 'pothos-golden',
     name: 'Golden Pothos',
     botanicalName: 'Epipremnum aureum',
