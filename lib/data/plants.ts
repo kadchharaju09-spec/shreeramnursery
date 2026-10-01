@@ -34,7 +34,7 @@ export const plants: Plant[] = [
     sunlight: "Full sun to bright indirect light",
     watering: "Water regularly, keep soil moist",
     benefits: ["Prolific bright blooms", "Great for sunny spots", "Low maintenance"],
-    image: 'allamanda',
+   image: "/images/plants/allamanda.png",
   },
   {
     id: 'pothos-golden',
