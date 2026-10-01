@@ -13,7 +13,8 @@ export function PlantCard({ plant }: PlantCardProps) {
   const whatsappLink = generatePlantInquiryLink(plant.name);
 
   return (
-  {/* Plant Image */}
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col animate-fade-in hover:scale-105">
+      {/* Plant Image */}
       <div className="w-full h-48 bg-gradient-to-br from-green-100 to-emerald-200 relative overflow-hidden flex items-center justify-center text-green-700 font-semibold">
         {plant.image ? (
           <img
