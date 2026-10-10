@@ -57,17 +57,29 @@ export default async function PlantDetailPage({ params }: PlantDetailPageProps) 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Image Section */}
           <div className="flex flex-col gap-4">
-            <div className="w-full h-96 bg-gradient-to-br from-green-100 to-emerald-200 rounded-lg relative overflow-hidden flex items-center justify-center text-green-700 font-semibold text-xl">
-              {plant.image ? (
+            {plant.images && plant.images.length > 0 ? (
+              plant.images.map((imgSrc, index) => (
+                <div key={index} className="w-full h-96 bg-gradient-to-br from-green-100 to-emerald-200 rounded-lg relative overflow-hidden flex items-center justify-center">
+                  <img
+                    src={imgSrc}
+                    alt={`${plant.name} ${index + 1}`}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+              ))
+            ) : plant.image ? (
+              <div className="w-full h-96 bg-gradient-to-br from-green-100 to-emerald-200 rounded-lg relative overflow-hidden flex items-center justify-center">
                 <img
                   src={plant.image}
                   alt={plant.name}
                   className="w-full h-full object-cover rounded-lg"
                 />
-              ) : (
+              </div>
+            ) : (
+              <div className="w-full h-96 bg-gradient-to-br from-green-100 to-emerald-200 rounded-lg relative overflow-hidden flex items-center justify-center text-green-700 font-semibold text-xl">
                 <span>{plant.name}</span>
-              )}
-            </div>
+              </div>
+            )}
           </div>
 
           {/* Info Section */}
@@ -96,7 +108,7 @@ export default async function PlantDetailPage({ params }: PlantDetailPageProps) 
             <div className="mb-6 space-y-4">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">☀️️</div>
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">☀</div>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900">Sunlight</p>
