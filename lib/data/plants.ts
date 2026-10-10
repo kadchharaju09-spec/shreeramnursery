@@ -8,7 +8,7 @@ export interface Plant {
   sunlight: string;
   water: string;
   benefits: string[];
-  image?: string;
+  image?: string[];
 }
 
 export const plants: Plant[] = [
