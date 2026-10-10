@@ -12,13 +12,16 @@ interface PlantCardProps {
 export function PlantCard({ plant }: PlantCardProps) {
   const whatsappLink = generatePlantInquiryLink(plant.name);
 
+  // Pick the first image from the images array, or fall back to single image if it exists
+  const displayImage = plant.images?.[0] || plant.image;
+
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col animate-fade-in hover:scale-105">
       {/* Plant Image */}
       <div className="w-full h-48 bg-gradient-to-br from-green-100 to-emerald-200 relative overflow-hidden flex items-center justify-center text-green-700 font-semibold">
-        {plant.image ? (
+        {displayImage ? (
           <img
-            src={plant.image}
+            src={displayImage}
             alt={plant.name}
             className="w-full h-full object-cover"
           />
