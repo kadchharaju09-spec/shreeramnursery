@@ -40,9 +40,8 @@ export const plants: Plant[] = [
     benefits: ["Prolific bright blooms", "Great for sunny spots", "Low maintenance"],
     images: [
       '/images/plants/allamanda-1.jpg',
-      '/images/plants/allamanda-2.jpg',
-      '/images/plants/allamanda-3.jpg'
-    ],
+      '/images/plants/allamanda-2.jpg'
+  ],
   },
   {
     id: 'pothos-golden',
