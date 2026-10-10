@@ -23,7 +23,10 @@ export const plants: Plant[] = [
     sunlight: 'Bright, indirect light',
     water: 'Water when top soil is dry',
     benefits: ['Air purifying', 'Low maintenance', 'Statement piece'],
-    image: 'monstera',
+    images: [
+      '/images/plants/monstera-1.jpg',
+      '/images/plants/monstera-2.jpg'
+    ],
   },
   {
     id: "allamanda",
