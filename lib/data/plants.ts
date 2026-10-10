@@ -45,15 +45,18 @@ export const plants: Plant[] = [
   },
   {
     id: 'pothos-golden',
-    name: 'Golden Pothos',
-    botanicalName: 'Epipremnum aureum',
+    name: 'Money Plant',
+    botanicalName: 'pothos-golden',
     category: 'indoor',
     description: 'Fast-growing vine with heart-shaped leaves. Great for hanging baskets and shelves.',
     careLevel: 'easy',
     sunlight: 'Low to medium indirect light',
     water: 'Water when soil is dry',
     benefits: ['Air purifying', 'Very hardy', 'Cascading growth'],
-    image: 'pothos',
+   images: [
+  "/images/plants/golden-pothos-1.jpg",
+  "/images/plants/golden-pothos-2.jpg"
+],
   },
   {
     id: 'snake-plant',
