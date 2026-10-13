@@ -8,7 +8,7 @@ export interface Plant {
   sunlight: string;
   water: string;
   benefits: string[];
-  image?: string[];
+  images?: string[];
 }
 
 export const plants: Plant[] = [
@@ -24,24 +24,26 @@ export const plants: Plant[] = [
     water: 'Water when top soil is dry',
     benefits: ['Air purifying', 'Low maintenance', 'Statement piece'],
     images: [
-      '/images/plants/monstera-1.jpg',
-      '/images/plants/monstera-2.jpg'
+      '/images/plants/monstera-deliciosa-1.jpg',
+      '/images/plants/monstera-deliciosa-2.jpg',
+      '/images/plants/monstera-deliciosa-3.jpg',
     ],
   },
   {
-    id: "allamanda",
-    name: "Allamanda",
-    botanicalName: "Allamanda cathartica",
-    category: "flowering",
-    careLevel: "easy",
-    description: "Vibrant tropical flowering plant known for its bright yellow trumpet-shaped blooms.",
-    sunlight: "Full sun to bright indirect light",
-    water: "Water regularly, keep soil moist",
-    benefits: ["Prolific bright blooms", "Great for sunny spots", "Low maintenance"],
+    id: 'allamanda',
+    name: 'Allamanda',
+    botanicalName: 'Allamanda cathartica',
+    category: 'flowering',
+    careLevel: 'easy',
+    description: 'Vibrant tropical flowering plant known for its bright yellow trumpet-shaped blooms.',
+    sunlight: 'Full sun to bright indirect light',
+    water: 'Water regularly, keep soil moist',
+    benefits: ['Prolific bright blooms', 'Great for sunny spots', 'Low maintenance'],
     images: [
       '/images/plants/allamanda-1.jpg',
-      '/images/plants/allamanda-2.jpg'
-  ],
+      '/images/plants/allamanda-2.jpg',
+      '/images/plants/allamanda-3.jpg',
+    ],
   },
   {
     id: 'pothos-golden',
@@ -53,10 +55,11 @@ export const plants: Plant[] = [
     sunlight: 'Low to medium indirect light',
     water: 'Water when soil is dry',
     benefits: ['Air purifying', 'Very hardy', 'Cascading growth'],
-   images: [
-  "/images/plants/golden-pothos-1.jpg",
-  "/images/plants/golden-pothos-2.jpg"
-],
+    images: [
+      '/images/plants/pothos-golden-1.jpg',
+      '/images/plants/pothos-golden-2.jpg',
+      '/images/plants/pothos-golden-3.jpg',
+    ],
   },
   {
     id: 'snake-plant',
@@ -68,11 +71,11 @@ export const plants: Plant[] = [
     sunlight: 'Low to bright light',
     water: 'Water sparingly, every 3-4 weeks',
     benefits: ['Air purifying', 'Low maintenance', 'Drought tolerant'],
-   images: [
-    "/images/plants/snake-plant-1.jpg",
-    "/images/plants/snake-plant-2.jpg",
-    "/images/plants/snake-plant-3.jpg",
-  ],
+    images: [
+      '/images/plants/snake-plant-1.jpg',
+      '/images/plants/snake-plant-2.jpg',
+      '/images/plants/snake-plant-3.jpg',
+    ],
   },
   {
     id: 'spider-plant',
@@ -84,7 +87,11 @@ export const plants: Plant[] = [
     sunlight: 'Bright, indirect light',
     water: 'Keep soil moist but not waterlogged',
     benefits: ['Air purifying', 'Pet friendly', 'Propagates easily'],
-    image: 'spider-plant',
+    images: [
+      '/images/plants/spider-plant-1.jpg',
+      '/images/plants/spider-plant-2.jpg',
+      '/images/plants/spider-plant-3.jpg',
+    ],
   },
   {
     id: 'peace-lily',
@@ -96,7 +103,11 @@ export const plants: Plant[] = [
     sunlight: 'Low to medium indirect light',
     water: 'Keep soil slightly moist',
     benefits: ['Air purifying', 'White flowers', 'Humidity indicator'],
-    image: 'peace-lily',
+    images: [
+      '/images/plants/peace-lily-1.jpg',
+      '/images/plants/peace-lily-2.jpg',
+      '/images/plants/peace-lily-3.jpg',
+    ],
   },
   {
     id: 'aloe-vera',
@@ -108,7 +119,11 @@ export const plants: Plant[] = [
     sunlight: 'Bright, indirect light',
     water: 'Water sparingly, drought tolerant',
     benefits: ['Medicinal properties', 'Low maintenance', 'Gel for skin'],
-    image: 'aloe-vera',
+    images: [
+      '/images/plants/aloe-vera-1.jpg',
+      '/images/plants/aloe-vera-2.jpg',
+      '/images/plants/aloe-vera-3.jpg',
+    ],
   },
   {
     id: 'jade-plant',
@@ -120,7 +135,11 @@ export const plants: Plant[] = [
     sunlight: 'Bright light',
     water: 'Water when soil is completely dry',
     benefits: ['Feng shui lucky plant', 'Long-lived', 'Easy care'],
-    image: 'jade-plant',
+    images: [
+      '/images/plants/jade-plant-1.jpg',
+      '/images/plants/jade-plant-2.jpg',
+      '/images/plants/jade-plant-3.jpg',
+    ],
   },
   {
     id: 'bougainvillea',
@@ -132,7 +151,11 @@ export const plants: Plant[] = [
     sunlight: 'Full sun',
     water: 'Water regularly, reduce in winter',
     benefits: ['Stunning blooms', 'Vibrant colors', 'Outdoor display'],
-    image: 'bougainvillea',
+    images: [
+      '/images/plants/bougainvillea-1.jpg',
+      '/images/plants/bougainvillea-2.jpg',
+      '/images/plants/bougainvillea-3.jpg',
+    ],
   },
   {
     id: 'basil-tulsi',
@@ -144,7 +167,11 @@ export const plants: Plant[] = [
     sunlight: 'Bright light, 6+ hours',
     water: 'Keep soil moist but not waterlogged',
     benefits: ['Medicinal', 'Culinary', 'Aromatic'],
-    image: 'herb',
+    images: [
+      '/images/plants/basil-tulsi-1.jpg',
+      '/images/plants/basil-tulsi-2.jpg',
+      '/images/plants/basil-tulsi-3.jpg',
+    ],
   },
 
   // --- Bill No. 55 Items ---
@@ -157,7 +184,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sunlight",
     water: "Moderate, allow soil to dry between waterings",
-    benefits: ["Fresh edible produce", "Low maintenance"]
+    benefits: ["Fresh edible produce", "Low maintenance"],
+    images: [
+      '/images/plants/bill55-1-1.jpg',
+      '/images/plants/bill55-1-2.jpg',
+      '/images/plants/bill55-1-3.jpg',
+    ],
   },
   {
     id: 'bill55-2',
@@ -168,7 +200,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Direct sunlight",
     water: "Regular watering until established",
-    benefits: ["High-yield sweet mangoes", "Excellent garden fruit tree"]
+    benefits: ["High-yield sweet mangoes", "Excellent garden fruit tree"],
+    images: [
+      '/images/plants/bill55-2-1.jpg',
+      '/images/plants/bill55-2-2.jpg',
+      '/images/plants/bill55-2-3.jpg',
+    ],
   },
   {
     id: 'bill55-3',
@@ -179,7 +216,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Keep soil moist but well-drained",
-    benefits: ["Continuous citrus harvest", "Rich in vitamin C"]
+    benefits: ["Continuous citrus harvest", "Rich in vitamin C"],
+    images: [
+      '/images/plants/bill55-3-1.jpg',
+      '/images/plants/bill55-3-2.jpg',
+      '/images/plants/bill55-3-3.jpg',
+    ],
   },
   {
     id: 'bill55-4',
@@ -190,7 +232,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Nutritious seasonal fruit", "Ornamental blossom"]
+    benefits: ["Nutritious seasonal fruit", "Ornamental blossom"],
+    images: [
+      '/images/plants/bill55-4-1.jpg',
+      '/images/plants/bill55-4-2.jpg',
+      '/images/plants/bill55-4-3.jpg',
+    ],
   },
   {
     id: 'bill55-5',
@@ -201,7 +248,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Low water requirement once established",
-    benefits: ["Bright multi-colored bracts", "Drought tolerant"]
+    benefits: ["Bright multi-colored bracts", "Drought tolerant"],
+    images: [
+      '/images/plants/bill55-5-1.jpg',
+      '/images/plants/bill55-5-2.jpg',
+      '/images/plants/bill55-5-3.jpg',
+    ],
   },
   {
     id: 'bill55-6',
@@ -212,7 +264,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Low",
-    benefits: ["Lush colorful blooms", "Great for hedges"]
+    benefits: ["Lush colorful blooms", "Great for hedges"],
+    images: [
+      '/images/plants/bill55-6-1.jpg',
+      '/images/plants/bill55-6-2.jpg',
+      '/images/plants/bill55-6-3.jpg',
+    ],
   },
   {
     id: 'bill55-7',
@@ -223,7 +280,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular watering",
-    benefits: ["Sweet crisp fruits", "Rich in fiber and vitamins"]
+    benefits: ["Sweet crisp fruits", "Rich in fiber and vitamins"],
+    images: [
+      '/images/plants/bill55-7-1.jpg',
+      '/images/plants/bill55-7-2.jpg',
+      '/images/plants/bill55-7-3.jpg',
+    ],
   },
   {
     id: 'bill55-8',
@@ -234,7 +296,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate, drought tolerant when mature",
-    benefits: ["Deep red sweet arils", "High antioxidant properties"]
+    benefits: ["Deep red sweet arils", "High antioxidant properties"],
+    images: [
+      '/images/plants/bill55-8-1.jpg',
+      '/images/plants/bill55-8-2.jpg',
+      '/images/plants/bill55-8-3.jpg',
+    ],
   },
   {
     id: 'bill55-9',
@@ -245,7 +312,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun to partial shade",
     water: "Regular",
-    benefits: ["Juicy tropical fruits", "Attractive glossy foliage"]
+    benefits: ["Juicy tropical fruits", "Attractive glossy foliage"],
+    images: [
+      '/images/plants/bill55-9-1.jpg',
+      '/images/plants/bill55-9-2.jpg',
+      '/images/plants/bill55-9-3.jpg',
+    ],
   },
   {
     id: 'bill55-10',
@@ -256,7 +328,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Sweet creamy custard apple fruit", "Adaptable growth"]
+    benefits: ["Sweet creamy custard apple fruit", "Adaptable growth"],
+    images: [
+      '/images/plants/bill55-10-1.jpg',
+      '/images/plants/bill55-10-2.jpg',
+      '/images/plants/bill55-10-3.jpg',
+    ],
   },
   {
     id: 'bill55-11',
@@ -267,7 +344,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular until established",
-    benefits: ["High vitamin C content", "Traditional medicinal uses"]
+    benefits: ["High vitamin C content", "Traditional medicinal uses"],
+    images: [
+      '/images/plants/bill55-11-1.jpg',
+      '/images/plants/bill55-11-2.jpg',
+      '/images/plants/bill55-11-3.jpg',
+    ],
   },
   {
     id: 'bill55-12',
@@ -278,7 +360,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Unique fruit variety", "Sturdy large plant"]
+    benefits: ["Unique fruit variety", "Sturdy large plant"],
+    images: [
+      '/images/plants/bill55-12-1.jpg',
+      '/images/plants/bill55-12-2.jpg',
+      '/images/plants/bill55-12-3.jpg',
+    ],
   },
   {
     id: 'bill55-13',
@@ -289,7 +376,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Specialty regional fruit variety"]
+    benefits: ["Specialty regional fruit variety"],
+    images: [
+      '/images/plants/bill55-13-1.jpg',
+      '/images/plants/bill55-13-2.jpg',
+      '/images/plants/bill55-13-3.jpg',
+    ],
   },
   {
     id: 'bill55-14',
@@ -300,7 +392,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Large seedless/small-seeded sweet jamoon", "Health benefits for blood sugar control"]
+    benefits: ["Large seedless/small-seeded sweet jamoon", "Health benefits for blood sugar control"],
+    images: [
+      '/images/plants/bill55-14-1.jpg',
+      '/images/plants/bill55-14-2.jpg',
+      '/images/plants/bill55-14-3.jpg',
+    ],
   },
   {
     id: 'bill55-15',
@@ -311,7 +408,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Delicious sweet seasonal fruit"]
+    benefits: ["Delicious sweet seasonal fruit"],
+    images: [
+      '/images/plants/bill55-15-1.jpg',
+      '/images/plants/bill55-15-2.jpg',
+      '/images/plants/bill55-15-3.jpg',
+    ],
   },
   {
     id: 'bill55-16',
@@ -322,7 +424,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Compact size suitable for pots", "Sweet citrus fruits"]
+    benefits: ["Compact size suitable for pots", "Sweet citrus fruits"],
+    images: [
+      '/images/plants/bill55-16-1.jpg',
+      '/images/plants/bill55-16-2.jpg',
+      '/images/plants/bill55-16-3.jpg',
+    ],
   },
   {
     id: 'bill55-17',
@@ -333,7 +440,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Bright indirect light to partial sun",
     water: "Keep soil evenly moist",
-    benefits: ["Air purification", "Tropical landscape appeal"]
+    benefits: ["Air purification", "Tropical landscape appeal"],
+    images: [
+      '/images/plants/bill55-17-1.jpg',
+      '/images/plants/bill55-17-2.jpg',
+      '/images/plants/bill55-17-3.jpg',
+    ],
   },
   {
     id: 'bill55-18',
@@ -344,7 +456,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Immediate fruiting potential", "High yield"]
+    benefits: ["Immediate fruiting potential", "High yield"],
+    images: [
+      '/images/plants/bill55-18-1.jpg',
+      '/images/plants/bill55-18-2.jpg',
+      '/images/plants/bill55-18-3.jpg',
+    ],
   },
   {
     id: 'bill55-19',
@@ -355,7 +472,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Mature canopy", "Abundant citrus yield"]
+    benefits: ["Mature canopy", "Abundant citrus yield"],
+    images: [
+      '/images/plants/bill55-19-1.jpg',
+      '/images/plants/bill55-19-2.jpg',
+      '/images/plants/bill55-19-3.jpg',
+    ],
   },
   {
     id: 'bill55-20',
@@ -366,7 +488,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Low",
-    benefits: ["Vibrant colorful floral displays"]
+    benefits: ["Vibrant colorful floral displays"],
+    images: [
+      '/images/plants/bill55-20-1.jpg',
+      '/images/plants/bill55-20-2.jpg',
+      '/images/plants/bill55-20-3.jpg',
+    ],
   },
 
   // --- Bill No. 56 Items ---
@@ -379,7 +506,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun to partial shade",
     water: "Keep soil well-drained, avoid waterlogging",
-    benefits: ["Nutritious superfood fruit", "Rich healthy fats"]
+    benefits: ["Nutritious superfood fruit", "Rich healthy fats"],
+    images: [
+      '/images/plants/bill56-21-1.jpg',
+      '/images/plants/bill56-21-2.jpg',
+      '/images/plants/bill56-21-3.jpg',
+    ],
   },
   {
     id: 'bill56-22',
@@ -390,7 +522,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Sun to partial shade",
     water: "Moderate",
-    benefits: ["General landscaping"]
+    benefits: ["General landscaping"],
+    images: [
+      '/images/plants/bill56-22-1.jpg',
+      '/images/plants/bill56-22-2.jpg',
+      '/images/plants/bill56-22-3.jpg',
+    ],
   },
   {
     id: 'bill56-23',
@@ -401,7 +538,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Low to moderate, drought resistant",
-    benefits: ["Mediterranean olive foliage", "Ornamental and productive"]
+    benefits: ["Mediterranean olive foliage", "Ornamental and productive"],
+    images: [
+      '/images/plants/bill56-23-1.jpg',
+      '/images/plants/bill56-23-2.jpg',
+      '/images/plants/bill56-23-3.jpg',
+    ],
   },
   {
     id: 'bill56-24',
@@ -412,7 +554,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Low to moderate",
-    benefits: ["Sweet edible tamarind pods", "Long-lived shade tree"]
+    benefits: ["Sweet edible tamarind pods", "Long-lived shade tree"],
+    images: [
+      '/images/plants/bill56-24-1.jpg',
+      '/images/plants/bill56-24-2.jpg',
+      '/images/plants/bill56-24-3.jpg',
+    ],
   },
   {
     id: 'bill56-25',
@@ -423,7 +570,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun to partial shade",
     water: "Regular",
-    benefits: ["Intensely fragrant golden blossoms", "Traditional value"]
+    benefits: ["Intensely fragrant golden blossoms", "Traditional value"],
+    images: [
+      '/images/plants/bill56-25-1.jpg',
+      '/images/plants/bill56-25-2.jpg',
+      '/images/plants/bill56-25-3.jpg',
+    ],
   },
   {
     id: 'bill56-26',
@@ -434,7 +586,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Regular watering",
-    benefits: ["World-renowned premium mango variety", "High value fruit"]
+    benefits: ["World-renowned premium mango variety", "High value fruit"],
+    images: [
+      '/images/plants/bill56-26-1.jpg',
+      '/images/plants/bill56-26-2.jpg',
+      '/images/plants/bill56-26-3.jpg',
+    ],
   },
   {
     id: 'bill56-27',
@@ -445,7 +602,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun to partial shade",
     water: "Regular, keep moist",
-    benefits: ["Spiritual and religious significance", "Traditional bead production"]
+    benefits: ["Spiritual and religious significance", "Traditional bead production"],
+    images: [
+      '/images/plants/bill56-27-1.jpg',
+      '/images/plants/bill56-27-2.jpg',
+      '/images/plants/bill56-27-3.jpg',
+    ],
   },
   {
     id: 'bill56-28',
@@ -456,7 +618,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Partial shade to indirect sun",
     water: "Keep soil acidic and moist",
-    benefits: ["Produces berries that turn sour foods sweet"]
+    benefits: ["Produces berries that turn sour foods sweet"],
+    images: [
+      '/images/plants/bill56-28-1.jpg',
+      '/images/plants/bill56-28-2.jpg',
+      '/images/plants/bill56-28-3.jpg',
+    ],
   },
   {
     id: 'bill56-29',
@@ -467,7 +634,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Crisp sweet guava fruits", "Compact bearing habit"]
+    benefits: ["Crisp sweet guava fruits", "Compact bearing habit"],
+    images: [
+      '/images/plants/bill56-29-1.jpg',
+      '/images/plants/bill56-29-2.jpg',
+      '/images/plants/bill56-29-3.jpg',
+    ],
   },
   {
     id: 'bill56-30',
@@ -478,7 +650,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Refreshing sweet citrus juice", "High vitamin content"]
+    benefits: ["Refreshing sweet citrus juice", "High vitamin content"],
+    images: [
+      '/images/plants/bill56-30-1.jpg',
+      '/images/plants/bill56-30-2.jpg',
+      '/images/plants/bill56-30-3.jpg',
+    ],
   },
   {
     id: 'bill56-31',
@@ -489,7 +666,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Massive edible tropical fruit", "Sturdy shade tree"]
+    benefits: ["Massive edible tropical fruit", "Sturdy shade tree"],
+    images: [
+      '/images/plants/bill56-31-1.jpg',
+      '/images/plants/bill56-31-2.jpg',
+      '/images/plants/bill56-31-3.jpg',
+    ],
   },
   {
     id: 'bill56-32',
@@ -500,7 +682,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Fresh homegrown apples"]
+    benefits: ["Fresh homegrown apples"],
+    images: [
+      '/images/plants/bill56-32-1.jpg',
+      '/images/plants/bill56-32-2.jpg',
+      '/images/plants/bill56-32-3.jpg',
+    ],
   },
   {
     id: 'bill56-33',
@@ -511,7 +698,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Star-shaped juicy fruit", "Ornamental canopy"]
+    benefits: ["Star-shaped juicy fruit", "Ornamental canopy"],
+    images: [
+      '/images/plants/bill56-33-1.jpg',
+      '/images/plants/bill56-33-2.jpg',
+      '/images/plants/bill56-33-3.jpg',
+    ],
   },
   {
     id: 'bill56-34',
@@ -522,7 +714,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Edible star fruit", "Easy grower"]
+    benefits: ["Edible star fruit", "Easy grower"],
+    images: [
+      '/images/plants/bill56-34-1.jpg',
+      '/images/plants/bill56-34-2.jpg',
+      '/images/plants/bill56-34-3.jpg',
+    ],
   },
   {
     id: 'bill56-35',
@@ -533,7 +730,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Unique garden specimen"]
+    benefits: ["Unique garden specimen"],
+    images: [
+      '/images/plants/bill56-35-1.jpg',
+      '/images/plants/bill56-35-2.jpg',
+      '/images/plants/bill56-35-3.jpg',
+    ],
   },
   {
     id: 'bill56-36',
@@ -544,7 +746,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["High quality sweet mangoes"]
+    benefits: ["High quality sweet mangoes"],
+    images: [
+      '/images/plants/bill56-36-1.jpg',
+      '/images/plants/bill56-36-2.jpg',
+      '/images/plants/bill56-36-3.jpg',
+    ],
   },
   {
     id: 'bill56-37',
@@ -555,7 +762,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Superior custard apple variety"]
+    benefits: ["Superior custard apple variety"],
+    images: [
+      '/images/plants/bill56-37-1.jpg',
+      '/images/plants/bill56-37-2.jpg',
+      '/images/plants/bill56-37-3.jpg',
+    ],
   },
   {
     id: 'bill56-38',
@@ -566,7 +778,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["King of mangoes (rich flavor and aroma)"]
+    benefits: ["King of mangoes (rich flavor and aroma)"],
+    images: [
+      '/images/plants/bill56-38-1.jpg',
+      '/images/plants/bill56-38-2.jpg',
+      '/images/plants/bill56-38-3.jpg',
+    ],
   },
   {
     id: 'bill56-39',
@@ -577,7 +794,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Premium jamoon fruit quality"]
+    benefits: ["Premium jamoon fruit quality"],
+    images: [
+      '/images/plants/bill56-39-1.jpg',
+      '/images/plants/bill56-39-2.jpg',
+      '/images/plants/bill56-39-3.jpg',
+    ],
   },
 
   // --- Bill No. 57 Items ---
@@ -590,7 +812,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Sweet delicious fruit"]
+    benefits: ["Sweet delicious fruit"],
+    images: [
+      '/images/plants/bill57-40-1.jpg',
+      '/images/plants/bill57-40-2.jpg',
+      '/images/plants/bill57-40-3.jpg',
+    ],
   },
   {
     id: 'bill57-41',
@@ -601,7 +828,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Striking red foliage and fruit", "Sweet flavor"]
+    benefits: ["Striking red foliage and fruit", "Sweet flavor"],
+    images: [
+      '/images/plants/bill57-41-1.jpg',
+      '/images/plants/bill57-41-2.jpg',
+      '/images/plants/bill57-41-3.jpg',
+    ],
   },
   {
     id: 'bill57-42',
@@ -612,7 +844,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Sweet sandy-textured brown fruits", "Reliable bearer"]
+    benefits: ["Sweet sandy-textured brown fruits", "Reliable bearer"],
+    images: [
+      '/images/plants/bill57-42-1.jpg',
+      '/images/plants/bill57-42-2.jpg',
+      '/images/plants/bill57-42-3.jpg',
+    ],
   },
   {
     id: 'bill57-43',
@@ -623,7 +860,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Exotic fruit variety"]
+    benefits: ["Exotic fruit variety"],
+    images: [
+      '/images/plants/bill57-43-1.jpg',
+      '/images/plants/bill57-43-2.jpg',
+      '/images/plants/bill57-43-3.jpg',
+    ],
   },
   {
     id: 'bill57-44',
@@ -634,7 +876,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Tropical fruit tree"]
+    benefits: ["Tropical fruit tree"],
+    images: [
+      '/images/plants/bill57-44-1.jpg',
+      '/images/plants/bill57-44-2.jpg',
+      '/images/plants/bill57-44-3.jpg',
+    ],
   },
   {
     id: 'bill57-45',
@@ -645,7 +892,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Low",
-    benefits: ["Continuous bright red blooms"]
+    benefits: ["Continuous bright red blooms"],
+    images: [
+      '/images/plants/bill57-45-1.jpg',
+      '/images/plants/bill57-45-2.jpg',
+      '/images/plants/bill57-45-3.jpg',
+    ],
   },
   {
     id: 'bill57-46',
@@ -656,7 +908,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Citrus fruit production"]
+    benefits: ["Citrus fruit production"],
+    images: [
+      '/images/plants/bill57-46-1.jpg',
+      '/images/plants/bill57-46-2.jpg',
+      '/images/plants/bill57-46-3.jpg',
+    ],
   },
   {
     id: 'bill57-47',
@@ -667,7 +924,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Juicy sweet mandarin oranges"]
+    benefits: ["Juicy sweet mandarin oranges"],
+    images: [
+      '/images/plants/bill57-47-1.jpg',
+      '/images/plants/bill57-47-2.jpg',
+      '/images/plants/bill57-47-3.jpg',
+    ],
   },
   {
     id: 'bill57-48',
@@ -678,7 +940,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Refreshing tart berries used for summer coolers"]
+    benefits: ["Refreshing tart berries used for summer coolers"],
+    images: [
+      '/images/plants/bill57-48-1.jpg',
+      '/images/plants/bill57-48-2.jpg',
+      '/images/plants/bill57-48-3.jpg',
+    ],
   },
   {
     id: 'bill57-49',
@@ -689,7 +956,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Fruit bearing ornamental"]
+    benefits: ["Fruit bearing ornamental"],
+    images: [
+      '/images/plants/bill57-49-1.jpg',
+      '/images/plants/bill57-49-2.jpg',
+      '/images/plants/bill57-49-3.jpg',
+    ],
   },
   {
     id: 'bill57-50',
@@ -700,7 +972,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Bright indirect light",
     water: "Keep soil moist",
-    benefits: ["Top indoor air purifier", "Lush tropical look"]
+    benefits: ["Top indoor air purifier", "Lush tropical look"],
+    images: [
+      '/images/plants/bill57-50-1.jpg',
+      '/images/plants/bill57-50-2.jpg',
+      '/images/plants/bill57-50-3.jpg',
+    ],
   },
   {
     id: 'bill57-51',
@@ -711,7 +988,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Bright indirect light",
     water: "Moderate",
-    benefits: ["Natural humidifier", "Clean air"]
+    benefits: ["Natural humidifier", "Clean air"],
+    images: [
+      '/images/plants/bill57-51-1.jpg',
+      '/images/plants/bill57-51-2.jpg',
+      '/images/plants/bill57-51-3.jpg',
+    ],
   },
   {
     id: 'bill57-52',
@@ -722,7 +1004,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Bright indirect light",
     water: "Moderate",
-    benefits: ["Popular indoor decorative plant"]
+    benefits: ["Popular indoor decorative plant"],
+    images: [
+      '/images/plants/bill57-52-1.jpg',
+      '/images/plants/bill57-52-2.jpg',
+      '/images/plants/bill57-52-3.jpg',
+    ],
   },
   {
     id: 'bill57-53',
@@ -733,7 +1020,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["High quality sweet black plums"]
+    benefits: ["High quality sweet black plums"],
+    images: [
+      '/images/plants/bill57-53-1.jpg',
+      '/images/plants/bill57-53-2.jpg',
+      '/images/plants/bill57-53-3.jpg',
+    ],
   },
   {
     id: 'bill57-54',
@@ -744,7 +1036,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Nutritious fruit crop"]
+    benefits: ["Nutritious fruit crop"],
+    images: [
+      '/images/plants/bill57-54-1.jpg',
+      '/images/plants/bill57-54-2.jpg',
+      '/images/plants/bill57-54-3.jpg',
+    ],
   },
   {
     id: 'bill57-55',
@@ -755,7 +1052,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Sweet fleshy fruit"]
+    benefits: ["Sweet fleshy fruit"],
+    images: [
+      '/images/plants/bill57-55-1.jpg',
+      '/images/plants/bill57-55-2.jpg',
+      '/images/plants/bill57-55-3.jpg',
+    ],
   },
   {
     id: 'bill57-56',
@@ -766,7 +1068,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Indirect filtered light",
     water: "Keep soil consistently moist",
-    benefits: ["Gorgeous patterned leaves", "Indoor aesthetics"]
+    benefits: ["Gorgeous patterned leaves", "Indoor aesthetics"],
+    images: [
+      '/images/plants/bill57-56-1.jpg',
+      '/images/plants/bill57-56-2.jpg',
+      '/images/plants/bill57-56-3.jpg',
+    ],
   },
   {
     id: 'bill57-57',
@@ -777,7 +1084,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Low",
-    benefits: ["Abundant multi-colored bracts"]
+    benefits: ["Abundant multi-colored bracts"],
+    images: [
+      '/images/plants/bill57-57-1.jpg',
+      '/images/plants/bill57-57-2.jpg',
+      '/images/plants/bill57-57-3.jpg',
+    ],
   },
   {
     id: 'bill57-58',
@@ -788,7 +1100,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Sweet citrus juice fruit"]
+    benefits: ["Sweet citrus juice fruit"],
+    images: [
+      '/images/plants/bill57-58-1.jpg',
+      '/images/plants/bill57-58-2.jpg',
+      '/images/plants/bill57-58-3.jpg',
+    ],
   },
 
   // --- Bill No. 58 Items ---
@@ -801,7 +1118,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Low",
-    benefits: ["Multiple flower colors on a single plant", "Striking garden visual"]
+    benefits: ["Multiple flower colors on a single plant", "Striking garden visual"],
+    images: [
+      '/images/plants/bill58-59-1.jpg',
+      '/images/plants/bill58-59-2.jpg',
+      '/images/plants/bill58-59-3.jpg',
+    ],
   },
   {
     id: 'bill58-60',
@@ -812,7 +1134,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun to partial shade",
     water: "Moderate",
-    benefits: ["Good for garden borders"]
+    benefits: ["Good for garden borders"],
+    images: [
+      '/images/plants/bill58-60-1.jpg',
+      '/images/plants/bill58-60-2.jpg',
+      '/images/plants/bill58-60-3.jpg',
+    ],
   },
   {
     id: 'bill58-61',
@@ -823,7 +1150,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Healthy citrus fruits"]
+    benefits: ["Healthy citrus fruits"],
+    images: [
+      '/images/plants/bill58-61-1.jpg',
+      '/images/plants/bill58-61-2.jpg',
+      '/images/plants/bill58-61-3.jpg',
+    ],
   },
   {
     id: 'bill58-62',
@@ -834,7 +1166,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular, loves moisture",
-    benefits: ["Refreshing crisp water apples"]
+    benefits: ["Refreshing crisp water apples"],
+    images: [
+      '/images/plants/bill58-62-1.jpg',
+      '/images/plants/bill58-62-2.jpg',
+      '/images/plants/bill58-62-3.jpg',
+    ],
   },
   {
     id: 'bill58-63',
@@ -845,7 +1182,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Low to moderate",
-    benefits: ["Sweet edible small berries", "Attracts birds"]
+    benefits: ["Sweet edible small berries", "Attracts birds"],
+    images: [
+      '/images/plants/bill58-63-1.jpg',
+      '/images/plants/bill58-63-2.jpg',
+      '/images/plants/bill58-63-3.jpg',
+    ],
   },
   {
     id: 'bill58-64',
@@ -856,7 +1198,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Sweet white bell-shaped crisp fruits"]
+    benefits: ["Sweet white bell-shaped crisp fruits"],
+    images: [
+      '/images/plants/bill58-64-1.jpg',
+      '/images/plants/bill58-64-2.jpg',
+      '/images/plants/bill58-64-3.jpg',
+    ],
   },
   {
     id: 'bill58-65',
@@ -867,7 +1214,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Low",
-    benefits: ["Fragrant white flowers", "Elegant sculptural branches"]
+    benefits: ["Fragrant white flowers", "Elegant sculptural branches"],
+    images: [
+      '/images/plants/bill58-65-1.jpg',
+      '/images/plants/bill58-65-2.jpg',
+      '/images/plants/bill58-65-3.jpg',
+    ],
   },
   {
     id: 'bill58-66',
@@ -878,7 +1230,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Quality edible black plum variety"]
+    benefits: ["Quality edible black plum variety"],
+    images: [
+      '/images/plants/bill58-66-1.jpg',
+      '/images/plants/bill58-66-2.jpg',
+      '/images/plants/bill58-66-3.jpg',
+    ],
   },
   {
     id: 'bill58-67',
@@ -889,7 +1246,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Moderate",
-    benefits: ["Nutritious unique yellow fruit resembling egg yolk texture"]
+    benefits: ["Nutritious unique yellow fruit resembling egg yolk texture"],
+    images: [
+      '/images/plants/bill58-67-1.jpg',
+      '/images/plants/bill58-67-2.jpg',
+      '/images/plants/bill58-67-3.jpg',
+    ],
   },
   {
     id: 'bill58-68',
@@ -900,7 +1262,12 @@ export const plants: Plant[] = [
     careLevel: "easy",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Abundant sweet citrus fruits"]
+    benefits: ["Abundant sweet citrus fruits"],
+    images: [
+      '/images/plants/bill58-68-1.jpg',
+      '/images/plants/bill58-68-2.jpg',
+      '/images/plants/bill58-68-3.jpg',
+    ],
   },
   {
     id: 'bill58-69',
@@ -911,7 +1278,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun",
     water: "Regular",
-    benefits: ["Delicious antioxidant-rich berries"]
+    benefits: ["Delicious antioxidant-rich berries"],
+    images: [
+      '/images/plants/bill58-69-1.jpg',
+      '/images/plants/bill58-69-2.jpg',
+      '/images/plants/bill58-69-3.jpg',
+    ],
   },
   {
     id: 'bill58-70',
@@ -922,7 +1294,12 @@ export const plants: Plant[] = [
     careLevel: "medium",
     sunlight: "Full sun with acidic soil",
     water: "Keep soil moist",
-    benefits: ["Superfood berries", "Attractive seasonal foliage"]
+    benefits: ["Superfood berries", "Attractive seasonal foliage"],
+    images: [
+      '/images/plants/bill58-70-1.jpg',
+      '/images/plants/bill58-70-2.jpg',
+      '/images/plants/bill58-70-3.jpg',
+    ],
   }
 ];
 
