@@ -68,7 +68,11 @@ export const plants: Plant[] = [
     sunlight: 'Low to bright light',
     water: 'Water sparingly, every 3-4 weeks',
     benefits: ['Air purifying', 'Low maintenance', 'Drought tolerant'],
-    image: 'snake-plant',
+   images: [
+    "/images/plants/snake-plant-1.jpg",
+    "/images/plants/snake-plant-2.jpg",
+    "/images/plants/snake-plant-3.jpg",
+  ],
   },
   {
     id: 'spider-plant',
