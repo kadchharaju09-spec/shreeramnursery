@@ -84,7 +84,11 @@ export const plants: Plant[] = [
     sunlight: 'Bright, indirect light',
     water: 'Keep soil moist but not waterlogged',
     benefits: ['Air purifying', 'Pet friendly', 'Propagates easily'],
-    image: 'spider-plant',
+  images: [
+    '/images/plants/spider-plant-1.jpg',
+    '/images/plants/spider-plant-2.jpg',
+    '/images/plants/spider-plant-3.jpg',
+  ],
   },
   {
     id: 'peace-lily',
@@ -96,7 +100,11 @@ export const plants: Plant[] = [
     sunlight: 'Low to medium indirect light',
     water: 'Keep soil slightly moist',
     benefits: ['Air purifying', 'White flowers', 'Humidity indicator'],
-    image: 'peace-lily',
+   images: [
+    '/images/plants/peace-lily-1.jpg',
+    '/images/plants/peace-lily-2.jpg',
+    '/images/plants/peace-lily-3.jpg',
+  ],
   },
   {
     id: 'aloe-vera',
@@ -108,7 +116,10 @@ export const plants: Plant[] = [
     sunlight: 'Bright, indirect light',
     water: 'Water sparingly, drought tolerant',
     benefits: ['Medicinal properties', 'Low maintenance', 'Gel for skin'],
-    image: 'aloe-vera',
+  images: [
+    '/images/plants/aloe-vera-1.jpg',
+    '/images/plants/aloe-vera-2.jpg',
+  ],
   },
   {
     id: 'jade-plant',
@@ -120,7 +131,11 @@ export const plants: Plant[] = [
     sunlight: 'Bright light',
     water: 'Water when soil is completely dry',
     benefits: ['Feng shui lucky plant', 'Long-lived', 'Easy care'],
-    image: 'jade-plant',
+   images: [
+    '/images/plants/jade-plant-1.jpg',
+    '/images/plants/jade-plant-2.jpg',
+    '/images/plants/jade-plant-3.jpg',
+  ],
   },
   {
     id: 'bougainvillea',
@@ -132,7 +147,11 @@ export const plants: Plant[] = [
     sunlight: 'Full sun',
     water: 'Water regularly, reduce in winter',
     benefits: ['Stunning blooms', 'Vibrant colors', 'Outdoor display'],
-    image: 'bougainvillea',
+   images: [
+    '/images/plants/bougainvillea-1.jpg',
+    '/images/plants/bougainvillea-2.jpg',
+    '/images/plants/bougainvillea-3.jpg',
+  ],
   },
   {
     id: 'basil-tulsi',
@@ -144,7 +163,11 @@ export const plants: Plant[] = [
     sunlight: 'Bright light, 6+ hours',
     water: 'Keep soil moist but not waterlogged',
     benefits: ['Medicinal', 'Culinary', 'Aromatic'],
-    image: 'herb',
+ images: [
+    '/images/plants/basil-tulsi-1.jpg',
+    '/images/plants/basil-tulsi-2.jpg',
+    '/images/plants/basil-tulsi-3.jpg',
+  ],
   },
 
   // --- Bill No. 55 Items ---
