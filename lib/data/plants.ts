@@ -1290,7 +1290,9 @@ export const plants: Plant[] = [
       '/images/plants/blueberry-10in-2.jpg',
       '/images/plants/blueberry-10in-3.jpg',
     ],
-  }
+      },
+];
+  
 
 export function getPlantById(id: string): Plant | undefined {
   return plants.find(plant => plant.id === id);
