@@ -1290,7 +1290,7 @@ export const plants: Plant[] = [
       '/images/plants/blueberry-10in-2.jpg',
       '/images/plants/blueberry-10in-3.jpg',
     ],
-      },
+  }
 ];
   
 
