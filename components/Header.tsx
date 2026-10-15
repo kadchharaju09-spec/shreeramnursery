@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { User } from 'lucide-react';
 import { BUSINESS_INFO } from '@/lib/constants';
 
 export function Header() {
@@ -29,22 +30,42 @@ export function Header() {
             <Link href="/catalog" className="hover:text-green-600 transition font-medium">Catalog</Link>
             <Link href="/about" className="hover:text-green-600 transition font-medium">About</Link>
             <Link href="/contact" className="hover:text-green-600 transition font-medium">Contact</Link>
+            
+            {/* Auth / Account Icon Link */}
+            <Link 
+              href="/auth" 
+              className="p-2 rounded-full text-gray-700 hover:bg-gray-100 hover:text-green-600 transition"
+              title="Sign In / Account"
+            >
+              <User className="w-5 h-5" />
+            </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden flex flex-col gap-1 cursor-pointer"
-          >
-            <span className="w-6 h-0.5 bg-gray-700"></span>
-            <span className="w-6 h-0.5 bg-gray-700"></span>
-            <span className="w-6 h-0.5 bg-gray-700"></span>
-          </button>
+          {/* Mobile Menu Button Area */}
+          <div className="flex items-center gap-4 md:hidden">
+            {/* Mobile Account Icon */}
+            <Link 
+              href="/auth" 
+              className="p-2 rounded-full text-gray-700 hover:bg-gray-100 hover:text-green-600 transition"
+              title="Sign In / Account"
+            >
+              <User className="w-5 h-5" />
+            </Link>
+
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="flex flex-col gap-1 cursor-pointer"
+            >
+              <span className="w-6 h-0.5 bg-gray-700"></span>
+              <span className="w-6 h-0.5 bg-gray-700"></span>
+              <span className="w-6 h-0.5 bg-gray-700"></span>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 flex flex-col gap-3 text-gray-700">
+          <nav className="md:hidden mt-4 flex flex-col gap-3 text-gray-700 border-t pt-3">
             <Link href="/" className="hover:text-green-600 transition font-medium">Home</Link>
             <Link href="/catalog" className="hover:text-green-600 transition font-medium">Catalog</Link>
             <Link href="/about" className="hover:text-green-600 transition font-medium">About</Link>
@@ -55,3 +76,4 @@ export function Header() {
     </header>
   );
 }
+
