@@ -236,22 +236,6 @@ export const plants: Plant[] = [
     ],
   },
   {
-    id: 'bougainvillea-thimma-2ft',
-    name: "Boganwillia Thimma 2'",
-    botanicalName: "Bougainvillea 'Thimma'",
-    category: "flowering",
-    description: "Vibrant Thimma variety bougainvillea flowering shrub (2 feet).",
-    careLevel: "easy",
-    sunlight: "Full sun",
-    water: "Low water requirement once established",
-    benefits: ["Bright multi-colored bracts", "Drought tolerant"],
-    images: [
-      '/images/plants/bougainvillea-thimma-2ft-1.jpg',
-      '/images/plants/bougainvillea-thimma-2ft-2.jpg',
-      '/images/plants/bougainvillea-thimma-2ft-3.jpg',
-    ],
-  },
-  {
     id: 'bougainvillea-mix-78-10',
     name: "Boganwillia Mix 78/10",
     botanicalName: "Bougainvillea spectabilis",
