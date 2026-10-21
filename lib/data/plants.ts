@@ -248,7 +248,6 @@ export const plants: Plant[] = [
     images: [
       '/images/plants/bougainvillea-mix-78-10-1.jpg',
       '/images/plants/bougainvillea-mix-78-10-2.jpg',
-      '/images/plants/bougainvillea-mix-78-10-3.jpg',
     ],
   },
   {
