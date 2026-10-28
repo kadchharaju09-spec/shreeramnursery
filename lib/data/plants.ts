@@ -1,178 +1,190 @@
 export interface Plant {
-  id: string;
-  name: string;
-  botanicalName: string;
-  category: 'indoor' | 'outdoor' | 'flowering' | 'succulent' | 'herb' | 'fruit';
-  description: string;
-  careLevel: 'easy' | 'medium' | 'hard';
-  sunlight: string;
-  water: string;
-  benefits: string[];
-  images?: string[];
+  id: string;
+  name: string;
+  price: number; // 👈 Added price type
+  botanicalName: string;
+  category: 'indoor' | 'outdoor' | 'flowering' | 'succulent' | 'herb' | 'fruit';
+  description: string;
+  careLevel: 'easy' | 'medium' | 'hard';
+  sunlight: string;
+  water: string;
+  benefits: string[];
+  images?: string[];
 }
 
 export const plants: Plant[] = [
-  // --- Your Existing Plants ---
-  {
-    id: 'monstera-deliciosa',
-    name: 'Monstera Deliciosa',
-    botanicalName: 'Rhaphidophora tetrasperma',
-    category: 'indoor',
-    description: 'Beautiful Swiss Cheese plant with distinctive split leaves. Perfect for modern interiors.',
-    careLevel: 'easy',
-    sunlight: 'Bright, indirect light',
-    water: 'Water when top soil is dry',
-    benefits: ['Air purifying', 'Low maintenance', 'Statement piece'],
-    images: [
-      '/images/plants/monstera-1.jpg',
-      '/images/plants/monstera-2.jpg'
-    ],
-  },
-  {
-    id: "allamanda",
-    name: "Allamanda",
-    botanicalName: "Allamanda cathartica",
-    category: "flowering",
-    careLevel: "easy",
-    description: "Vibrant tropical flowering plant known for its bright yellow trumpet-shaped blooms.",
-    sunlight: "Full sun to bright indirect light",
-    water: "Water regularly, keep soil moist",
-    benefits: ["Prolific bright blooms", "Great for sunny spots", "Low maintenance"],
-    images: [
-      '/images/plants/allamanda-1.jpg',
-      '/images/plants/allamanda-2.jpg'
-  ],
-  },
-  {
-    id: 'pothos-golden',
-    name: 'Money Plant',
-    botanicalName: 'pothos-golden',
-    category: 'indoor',
-    description: 'Fast-growing vine with heart-shaped leaves. Great for hanging baskets and shelves.',
-    careLevel: 'easy',
-    sunlight: 'Low to medium indirect light',
-    water: 'Water when soil is dry',
-    benefits: ['Air purifying', 'Very hardy', 'Cascading growth'],
-   images: [
-  "/images/plants/golden-pothos-1.jpg",
-  "/images/plants/golden-pothos-2.jpg"
+  // --- Your Existing Plants ---
+  {
+    id: 'monstera-deliciosa',
+    price: 100,
+    name: 'Monstera Deliciosa',
+    botanicalName: 'Rhaphidophora tetrasperma',
+    category: 'indoor',
+    description: 'Beautiful Swiss Cheese plant with distinctive split leaves. Perfect for modern interiors.',
+    careLevel: 'easy',
+    sunlight: 'Bright, indirect light',
+    water: 'Water when top soil is dry',
+    benefits: ['Air purifying', 'Low maintenance', 'Statement piece'],
+    images: [
+      '/images/plants/monstera-1.jpg',
+      '/images/plants/monstera-2.jpg'
+    ],
+  },
+  {
+    id: "allamanda",
+    price: 100,
+    name: "Allamanda",
+    botanicalName: "Allamanda cathartica",
+    category: "flowering",
+    careLevel: "easy",
+    description: "Vibrant tropical flowering plant known for its bright yellow trumpet-shaped blooms.",
+    sunlight: "Full sun to bright indirect light",
+    water: "Water regularly, keep soil moist",
+    benefits: ["Prolific bright blooms", "Great for sunny spots", "Low maintenance"],
+    images: [
+      '/images/plants/allamanda-1.jpg',
+      '/images/plants/allamanda-2.jpg'
+  ],
+  },
+  {
+    id: 'pothos-golden',
+    price: 100,
+    name: 'Money Plant',
+    botanicalName: 'pothos-golden',
+    category: 'indoor',
+    description: 'Fast-growing vine with heart-shaped leaves. Great for hanging baskets and shelves.',
+    careLevel: 'easy',
+    sunlight: 'Low to medium indirect light',
+    water: 'Water when soil is dry',
+    benefits: ['Air purifying', 'Very hardy', 'Cascading growth'],
+   images: [
+  "/images/plants/golden-pothos-1.jpg",
+  "/images/plants/golden-pothos-2.jpg"
 ],
-  },
-  {
-    id: 'snake-plant',
-    name: 'Snake Plant',
-    botanicalName: 'Sansevieria trifasciata',
-    category: 'succulent',
-    description: 'Architectural succulent with tall, striped leaves. Extremely drought tolerant.',
-    careLevel: 'easy',
-    sunlight: 'Low to bright light',
-    water: 'Water sparingly, every 3-4 weeks',
-    benefits: ['Air purifying', 'Low maintenance', 'Drought tolerant'],
-   images: [
-    "/images/plants/snake-plant-1.jpg",
-    "/images/plants/snake-plant-2.jpg",
-    "/images/plants/snake-plant-3.jpg",
-  ],
-  },
-  {
-    id: 'spider-plant',
-    name: 'Spider Plant',
-    botanicalName: 'Chlorophytum comosum',
-    category: 'indoor',
-    description: 'Classic houseplant with green and white striped leaves. Produces cute baby plantlets.',
-    careLevel: 'easy',
-    sunlight: 'Bright, indirect light',
-    water: 'Keep soil moist but not waterlogged',
-    benefits: ['Air purifying', 'Pet friendly', 'Propagates easily'],
-  images: [
+  },
+  {
+    id: 'snake-plant',
+    price: 100,
+    name: 'Snake Plant',
+    botanicalName: 'Sansevieria trifasciata',
+    category: 'succulent',
+    description: 'Architectural succulent with tall, striped leaves. Extremely drought tolerant.',
+    careLevel: 'easy',
+    sunlight: 'Low to bright light',
+    water: 'Water sparingly, every 3-4 weeks',
+    benefits: ['Air purifying', 'Low maintenance', 'Drought tolerant'],
+   images: [
+    "/images/plants/snake-plant-1.jpg",
+    "/images/plants/snake-plant-2.jpg",
+    "/images/plants/snake-plant-3.jpg",
+  ],
+  },
+  {
+    id: 'spider-plant',
+    price: 100,
+    name: 'Spider Plant',
+    botanicalName: 'Chlorophytum comosum',
+    category: 'indoor',
+    description: 'Classic houseplant with green and white striped leaves. Produces cute baby plantlets.',
+    careLevel: 'easy',
+    sunlight: 'Bright, indirect light',
+    water: 'Keep soil moist but not waterlogged',
+    benefits: ['Air purifying', 'Pet friendly', 'Propagates easily'],
+  images: [
     '/images/plants/spider-plant-1.jpg',
     '/images/plants/spider-plant-2.jpg',
     '/images/plants/spider-plant-3.jpg',
   ],
-  },
-  {
-    id: 'peace-lily',
-    name: 'Peace Lily',
-    botanicalName: 'Spathiphyllum wallisii',
-    category: 'indoor',
-    description: 'Elegant white flowering plant. Known for air purifying abilities.',
-    careLevel: 'medium',
-    sunlight: 'Low to medium indirect light',
-    water: 'Keep soil slightly moist',
-    benefits: ['Air purifying', 'White flowers', 'Humidity indicator'],
-   images: [
+  },
+  {
+    id: 'peace-lily',
+    price: 100,
+    name: 'Peace Lily',
+    botanicalName: 'Spathiphyllum wallisii',
+    category: 'indoor',
+    description: 'Elegant white flowering plant. Known for air purifying abilities.',
+    careLevel: 'medium',
+    sunlight: 'Low to medium indirect light',
+    water: 'Keep soil slightly moist',
+    benefits: ['Air purifying', 'White flowers', 'Humidity indicator'],
+   images: [
     '/images/plants/peace-lily-1.jpg',
     '/images/plants/peace-lily-2.jpg',
     '/images/plants/peace-lily-3.jpg',
   ],
-  },
-  {
-    id: 'aloe-vera',
-    name: 'Aloe Vera',
-    botanicalName: 'Aloe barbadensis',
-    category: 'succulent',
-    description: 'Medicinal succulent with gel-filled leaves. Great for skin care and healing.',
-    careLevel: 'easy',
-    sunlight: 'Bright, indirect light',
-    water: 'Water sparingly, drought tolerant',
-    benefits: ['Medicinal properties', 'Low maintenance', 'Gel for skin'],
-  images: [
+  },
+  {
+    id: 'aloe-vera',
+    price: 100,
+    name: 'Aloe Vera',
+    botanicalName: 'Aloe barbadensis',
+    category: 'succulent',
+    description: 'Medicinal succulent with gel-filled leaves. Great for skin care and healing.',
+    careLevel: 'easy',
+    sunlight: 'Bright, indirect light',
+    water: 'Water sparingly, drought tolerant',
+    benefits: ['Medicinal properties', 'Low maintenance', 'Gel for skin'],
+  images: [
     '/images/plants/aloe-vera-1.jpg',
     '/images/plants/aloe-vera-2.jpg',
   ],
-  },
-  {
-    id: 'jade-plant',
-    name: 'Jade Plant',
-    botanicalName: 'Crassula ovata',
-    category: 'succulent',
-    description: 'Lucky plant with thick, coin-shaped leaves. Symbol of prosperity and friendship.',
-    careLevel: 'easy',
-    sunlight: 'Bright light',
-    water: 'Water when soil is completely dry',
-    benefits: ['Feng shui lucky plant', 'Long-lived', 'Easy care'],
-   images: [
+  },
+  {
+    id: 'jade-plant',
+    price: 100,
+    name: 'Jade Plant',
+    botanicalName: 'Crassula ovata',
+    category: 'succulent',
+    description: 'Lucky plant with thick, coin-shaped leaves. Symbol of prosperity and friendship.',
+    careLevel: 'easy',
+    sunlight: 'Bright light',
+    water: 'Water when soil is completely dry',
+    benefits: ['Feng shui lucky plant', 'Long-lived', 'Easy care'],
+   images: [
     '/images/plants/jade-plant-1.jpg',
     '/images/plants/jade-plant-2.jpg',
     '/images/plants/jade-plant-3.jpg',
   ],
-  },
-  {
-    id: 'bougainvillea',
-    name: 'Bougainvillea',
-    botanicalName: 'Bougainvillea glabra',
-    category: 'flowering',
-    description: 'Vibrant flowering plant with colorful bracts. Perfect for outdoor gardens and patios.',
-    careLevel: 'medium',
-    sunlight: 'Full sun',
-    water: 'Water regularly, reduce in winter',
-    benefits: ['Stunning blooms', 'Vibrant colors', 'Outdoor display'],
-   images: [
+  },
+  {
+    id: 'bougainvillea',
+    price: 100,
+    name: 'Bougainvillea',
+    botanicalName: 'Bougainvillea glabra',
+    category: 'flowering',
+    description: 'Vibrant flowering plant with colorful bracts. Perfect for outdoor gardens and patios.',
+    careLevel: 'medium',
+    sunlight: 'Full sun',
+    water: 'Water regularly, reduce in winter',
+    benefits: ['Stunning blooms', 'Vibrant colors', 'Outdoor display'],
+   images: [
     '/images/plants/bougainvillea-1.jpg',
     '/images/plants/bougainvillea-2.jpg',
     '/images/plants/bougainvillea-3.jpg',
   ],
-  },
-  {
-    id: 'basil-tulsi',
-    name: 'Tulsi (Holy Basil)',
-    botanicalName: 'Ocimum sanctum',
-    category: 'herb',
-    description: 'Sacred herb used in Indian cuisine and Ayurveda. Fragrant and easy to grow.',
-    careLevel: 'easy',
-    sunlight: 'Bright light, 6+ hours',
-    water: 'Keep soil moist but not waterlogged',
-    benefits: ['Medicinal', 'Culinary', 'Aromatic'],
- images: [
+  },
+  {
+    id: 'basil-tulsi',
+    price: 100,
+    name: 'Tulsi (Holy Basil)',
+    botanicalName: 'Ocimum sanctum',
+    category: 'herb',
+    description: 'Sacred herb used in Indian cuisine and Ayurveda. Fragrant and easy to grow.',
+    careLevel: 'easy',
+    sunlight: 'Bright light, 6+ hours',
+    water: 'Keep soil moist but not waterlogged',
+    benefits: ['Medicinal', 'Culinary', 'Aromatic'],
+ images: [
     '/images/plants/basil-tulsi-1.jpg',
     '/images/plants/basil-tulsi-2.jpg',
     '/images/plants/basil-tulsi-3.jpg',
   ],
-  },
+  },
 
- // --- Fruit & Outdoor Catalog Items ---
+ // --- Fruit & Outdoor Catalog Items ---
   {
     id: 'sweet-kammarak-2ft',
+    price: 100,
     name: "Sweet Gra. Kammarak 2'",
     botanicalName: "Murraya koenigii / Local Variety",
     category: "fruit",
@@ -189,6 +201,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'thailand-mango-18ft',
+    price: 100,
     name: "Thailand Mango Gra. 18'",
     botanicalName: "Mangifera indica",
     category: "fruit",
@@ -205,6 +218,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'hybrid-lemon-2ft',
+    price: 100,
     name: "Hyb Lemon 2'",
     botanicalName: "Citrus limon",
     category: "fruit",
@@ -221,6 +235,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'apricot-2ft',
+    price: 100,
     name: "Apricot 2'",
     botanicalName: "Prunus armeniaca",
     category: "fruit",
@@ -237,6 +252,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'bougainvillea-mix-78-10',
+    price: 100,
     name: "Boganwillia Mix 78/10",
     botanicalName: "Bougainvillea spectabilis",
     category: "flowering",
@@ -252,6 +268,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'thailand-pink-guava-2ft',
+    price: 100,
     name: "Thailand Pink Guava + A.Saf. 2'",
     botanicalName: "Psidium guajava",
     category: "fruit",
@@ -268,6 +285,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'bhagawa-anar-2ft',
+    price: 100,
     name: "Bhagawa Annar 2'",
     botanicalName: "Punica granatum",
     category: "fruit",
@@ -284,6 +302,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'hybrid-jamboo-red-2ft',
+    price: 100,
     name: "Hyb Jamboo Red 2'",
     botanicalName: "Syzygium malaccense",
     category: "fruit",
@@ -300,6 +319,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'seetafal-balanagar-2ft',
+    price: 100,
     name: "Seetafal Gra. Balanagar 2'",
     botanicalName: "Annona squamosa",
     category: "fruit",
@@ -316,6 +336,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'amla-na7-2ft',
+    price: 100,
     name: "Amla Na-7 Gra. 2'",
     botanicalName: "Phyllanthus emblica",
     category: "fruit",
@@ -332,6 +353,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'ravanakalam-white-10in',
+    price: 100,
     name: "Ravanakalam White 10'",
     botanicalName: "Syzygium cumini variant / Local",
     category: "fruit",
@@ -348,6 +370,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'ravanakalam-badoli-2ft',
+    price: 100,
     name: "Ravanakalam Badoli 2'",
     botanicalName: "Syzygium cumini variant",
     category: "fruit",
@@ -364,6 +387,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'kg10-jamoon-2ft',
+    price: 100,
     name: "KG-10 Jamoon Gra. 2'",
     botanicalName: "Syzygium cumini",
     category: "fruit",
@@ -380,6 +404,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'ramafal-2ft',
+    price: 100,
     name: "Ramafal Gra. 2'",
     botanicalName: "Annona reticulata",
     category: "fruit",
@@ -396,6 +421,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'sweet-narangi-2ft',
+    price: 100,
     name: "Sweet Narangi 2'",
     botanicalName: "Citrus reticulata / microcarpa",
     category: "fruit",
@@ -412,6 +438,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'verchimary-green-palm-2ft',
+    price: 100,
     name: "Verchimary Green Palm 2'",
     botanicalName: "Areca / Palm family",
     category: "outdoor",
@@ -428,6 +455,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'hybrid-lemon-8x8',
+    price: 100,
     name: "Hyb Lemon 8'x8'",
     botanicalName: "Citrus limon",
     category: "fruit",
@@ -444,6 +472,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'hybrid-lemon-13ft',
+    price: 100,
     name: "Hyb Lemon 13'",
     botanicalName: "Citrus limon",
     category: "fruit",
@@ -460,6 +489,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'bougainvillea-konkan-10in',
+    price: 100,
     name: "Boganwillia Mix 10' Konk. Ver.",
     botanicalName: "Bougainvillea spectabilis",
     category: "flowering",
@@ -476,6 +506,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'avocado-10in',
+    price: 100,
     name: "Avacodo 10'",
     botanicalName: "Persea americana",
     category: "fruit",
@@ -492,6 +523,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'setur-10in',
+    price: 100,
     name: "Setur 10'",
     botanicalName: "Local Specimen",
     category: "outdoor",
@@ -508,6 +540,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'olive-13ft',
+    price: 100,
     name: "Oliv Oil 13'",
     botanicalName: "Olea europaea",
     category: "fruit",
@@ -524,6 +557,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'sweet-imly-10in',
+    price: 100,
     name: "Sweet Imly Gra. 10'",
     botanicalName: "Tamarindus indica",
     category: "fruit",
@@ -540,6 +574,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'sone-champa-13ft',
+    price: 100,
     name: "Sone Champa Gra. 13'",
     botanicalName: "Magnolia champaca",
     category: "flowering",
@@ -556,6 +591,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'miyazaki-mango-13ft',
+    price: 100,
     name: "Miyazaki Mango Gra. 13'",
     botanicalName: "Mangifera indica 'Miyazaki'",
     category: "fruit",
@@ -572,6 +608,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'rudraksh-10in',
+    price: 100,
     name: "Rudraksh 10'",
     botanicalName: "Elaeocarpus ganitrus",
     category: "outdoor",
@@ -588,6 +625,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'miracle-fruit-10in',
+    price: 100,
     name: "Miracle Fruit 10'",
     botanicalName: "Synsepalum dulcificum",
     category: "fruit",
@@ -604,6 +642,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'golden8-guava-10in',
+    price: 100,
     name: "Golden-8 Guava 10'",
     botanicalName: "Psidium guajava 'Golden-8'",
     category: "fruit",
@@ -620,6 +659,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'vietnam-musambi-13ft',
+    price: 100,
     name: "Vietnam Musambi 13'",
     botanicalName: "Citrus limetta",
     category: "fruit",
@@ -636,6 +676,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'at-panas-10in',
+    price: 100,
     name: "A.T. Panas Gra. 10'",
     botanicalName: "Artocarpus heterophyllus",
     category: "fruit",
@@ -652,6 +693,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'malasana-apple-10in',
+    price: 100,
     name: "Malasana Apple 10'",
     botanicalName: "Malus domestica variant",
     category: "fruit",
@@ -668,6 +710,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'hybrid-kammarak-13ft',
+    price: 100,
     name: "Hyb Gra. Kammarak 13'",
     botanicalName: "Averrhoa carambola",
     category: "fruit",
@@ -684,6 +727,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'hybrid-kammarak-10in',
+    price: 100,
     name: "Hyb Gra. Kammarak 10'",
     botanicalName: "Averrhoa carambola",
     category: "fruit",
@@ -700,6 +744,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'ravanakalam-white-10in-spec',
+    price: 100,
     name: "Ravanakalam White 10'",
     botanicalName: "Syzygium variant",
     category: "fruit",
@@ -716,6 +761,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'thailand-mango-13ft',
+    price: 100,
     name: "Thailand Mango Gra. 13'",
     botanicalName: "Mangifera indica",
     category: "fruit",
@@ -732,6 +778,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'seetafal-balanagar-13ft',
+    price: 100,
     name: "Seetafal Gra. Balanagar 13'",
     botanicalName: "Annona squamosa",
     category: "fruit",
@@ -748,6 +795,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'alphonso-ratnagiri-13ft',
+    price: 100,
     name: "Alphonso Mango Gra. Ratnagiri 13'",
     botanicalName: "Mangifera indica 'Alphonso'",
     category: "fruit",
@@ -764,6 +812,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'badoli-kanajamoon-13ft',
+    price: 100,
     name: "Badoli Kanajamoon Gra. 13'",
     botanicalName: "Syzygium cumini 'Badoli'",
     category: "fruit",
@@ -780,6 +829,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'seetafal-balanagar-10in',
+    price: 100,
     name: "Seetafal Gra. Balanagar 10'",
     botanicalName: "Annona squamosa",
     category: "fruit",
@@ -796,6 +846,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'red-seetafal-10in',
+    price: 100,
     name: "Red Seetafal Gra. 10' Big Size",
     botanicalName: "Annona squamosa 'Red'",
     category: "fruit",
@@ -812,6 +863,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'chiku-kalapatti-10in',
+    price: 100,
     name: "Chiku Kalapatti 10'",
     botanicalName: "Manilkara zapota 'Kalapatti'",
     category: "fruit",
@@ -828,6 +880,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'red-seetafal-2ft',
+    price: 100,
     name: "Red Seetafal Gra. 2'",
     botanicalName: "Annona squamosa 'Red'",
     category: "fruit",
@@ -844,6 +897,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'panas-rgo-2ft',
+    price: 100,
     name: "Panas Rgo Gra. 2'",
     botanicalName: "Artocarpus heterophyllus",
     category: "fruit",
@@ -860,6 +914,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'bougainvillea-singapore-red-18in',
+    price: 100,
     name: "Hyb Singapore Red 18'",
     botanicalName: "Bougainvillea 'Singapore Red'",
     category: "flowering",
@@ -876,6 +931,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'musambi-rangapur-10in',
+    price: 100,
     name: "Musambi Rangapur 10'",
     botanicalName: "Citrus limetta 'Rangapur'",
     category: "fruit",
@@ -892,6 +948,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'nagpur-santhara-10in',
+    price: 100,
     name: "Nagpur Santhara 10'",
     botanicalName: "Citrus reticulata",
     category: "fruit",
@@ -908,6 +965,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'falsa-10in',
+    price: 100,
     name: "Falsa 10'",
     botanicalName: "Grewia asiatica",
     category: "fruit",
@@ -924,6 +982,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'hybrid-anjora-10in',
+    price: 100,
     name: "Hyb Anjora 10'",
     botanicalName: "Punica granatum / Local hybrid",
     category: "fruit",
@@ -940,6 +999,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'areca-palm-16ft',
+    price: 100,
     name: "Arekapalm 16'",
     botanicalName: "Dypsis lutescens",
     category: "indoor",
@@ -956,6 +1016,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'areca-palm-13ft',
+    price: 100,
     name: "Arekapalm 13'",
     botanicalName: "Dypsis lutescens",
     category: "indoor",
@@ -972,6 +1033,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'areca-palm-10in',
+    price: 100,
     name: "Arekapalm 10'",
     botanicalName: "Dypsis lutescens",
     category: "indoor",
@@ -988,6 +1050,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'kg10-jamoon-10in',
+    price: 100,
     name: "KG-10 Jamoon Gra. 10'",
     botanicalName: "Syzygium cumini",
     category: "fruit",
@@ -1004,6 +1067,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'badoli-jamoon-10in',
+    price: 100,
     name: "Badoli Jamoon Gra. 10'",
     botanicalName: "Syzygium cumini 'Badoli'",
     category: "fruit",
@@ -1020,6 +1084,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'seetafal-kattman-10in',
+    price: 100,
     name: "Seetafal Gra. Kattman 10'",
     botanicalName: "Annona squamosa 'Kattman'",
     category: "fruit",
@@ -1036,6 +1101,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'kelatia-lufra-8in',
+    price: 100,
     name: "Kelatia Lufra 8'",
     botanicalName: "Calathea / Foliage plant",
     category: "indoor",
@@ -1052,6 +1118,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'bougainvillea-thimma-13ft',
+    price: 100,
     name: "Boganwillia Thimma 13'",
     botanicalName: "Bougainvillea 'Thimma'",
     category: "flowering",
@@ -1068,6 +1135,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'sweet-lemon-10in',
+    price: 100,
     name: "Sweet Lemon 10'",
     botanicalName: "Citrus limetta",
     category: "fruit",
@@ -1084,6 +1152,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'bougainvillea-multicolor-12pp',
+    price: 100,
     name: "Boganwillia Multi Colours 12pp",
     botanicalName: "Bougainvillea spectabilis",
     category: "flowering",
@@ -1100,6 +1169,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'kallaspati-10in',
+    price: 100,
     name: "Kallaspati 10'",
     botanicalName: "Ornamental Shrub",
     category: "outdoor",
@@ -1116,6 +1186,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'musambi-rangapur-13ft',
+    price: 100,
     name: "Musambi Rangapur 13'",
     botanicalName: "Citrus limetta",
     category: "fruit",
@@ -1132,6 +1203,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'green-jamboo-10in',
+    price: 100,
     name: "Green Jamboo 10'",
     botanicalName: "Syzygium samarangense",
     category: "fruit",
@@ -1148,6 +1220,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'singapore-cherry-10in',
+    price: 100,
     name: "Singapure Cherry 10'",
     botanicalName: "Muntingia calabura",
     category: "fruit",
@@ -1164,6 +1237,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'hybrid-jamboo-white-10in',
+    price: 100,
     name: "Hyb Jamboo White 10'",
     botanicalName: "Syzygium samarangense 'White'",
     category: "fruit",
@@ -1180,6 +1254,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'american-plumeria-white-13ft',
+    price: 100,
     name: "American Plu. White 13'",
     botanicalName: "Plumeria obtusa 'White'",
     category: "flowering",
@@ -1196,6 +1271,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'pan-jamoon-10in',
+    price: 100,
     name: "Pan Jamoon 10'",
     botanicalName: "Syzygium cumini variant",
     category: "fruit",
@@ -1212,6 +1288,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'egg-fruit-10in',
+    price: 100,
     name: "Egg Fruit 10'",
     botanicalName: "Pouteria campechiana",
     category: "fruit",
@@ -1228,6 +1305,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'sweet-narangi-13ft',
+    price: 100,
     name: "Sweet Narangi 13'",
     botanicalName: "Citrus microcarpa",
     category: "fruit",
@@ -1244,6 +1322,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'blackberry-10in',
+    price: 100,
     name: "Black Berry 10'",
     botanicalName: "Rubus fruticosus",
     category: "fruit",
@@ -1260,6 +1339,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'blueberry-10in',
+    price: 100,
     name: "Blue Berry 10'",
     botanicalName: "Vaccinium corymbosum",
     category: "fruit",
@@ -1278,19 +1358,18 @@ export const plants: Plant[] = [
   
 
 export function getPlantById(id: string): Plant | undefined {
-  return plants.find(plant => plant.id === id);
+  return plants.find(plant => plant.id === id);
 }
 
 export function getPlantsByCategory(category: Plant['category']): Plant[] {
-  return plants.filter(plant => plant.category === category);
+  return plants.filter(plant => plant.category === category);
 }
 
 export function searchPlants(query: string): Plant[] {
-  const lowerQuery = query.toLowerCase();
-  return plants.filter(plant =>
-    plant.name.toLowerCase().includes(lowerQuery) ||
-    plant.botanicalName.toLowerCase().includes(lowerQuery) ||
-    plant.description.toLowerCase().includes(lowerQuery)
-  );
+  const lowerQuery = query.toLowerCase();
+  return plants.filter(plant =>
+    plant.name.toLowerCase().includes(lowerQuery) ||
+    plant.botanicalName.toLowerCase().includes(lowerQuery) ||
+    plant.description.toLowerCase().includes(lowerQuery)
+  );
 }
-  
