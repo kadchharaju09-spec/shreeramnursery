@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { User, ShoppingCart, LogOut } from 'lucide-react';
 import { BUSINESS_INFO } from '@/lib/constants';
-import { createClient } from '@/utils/supabase/client';
+import { createClient } from '@/utils/supabase';
 import { useCart } from '@/context/CartContext';
 import { User as SupabaseUser } from '@supabase/supabase-js';
 
