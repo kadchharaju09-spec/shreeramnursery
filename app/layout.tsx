@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { FloatingWhatsAppButton } from '@/components/FloatingWhatsAppButton'
+import { CartProvider } from '@/context/CartContext'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -43,11 +44,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased bg-white text-gray-900">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <FloatingWhatsAppButton />
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <CartProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <FloatingWhatsAppButton />
+          {process.env.NODE_ENV === 'production' && <Analytics />}
+        </CartProvider>
       </body>
     </html>
   )
