@@ -1,6 +1,6 @@
 'use client';
 
-export const dynamic = 'force-dynamic'; // 👈 Forces dynamic rendering to prevent prerender errors
+export const dynamic = 'force-dynamic';
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
