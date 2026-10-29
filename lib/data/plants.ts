@@ -64,7 +64,7 @@ export const plants: Plant[] = [
   },
   {
     id: 'snake-plant',
-    price: 100,
+    price: 1,
     name: 'Snake Plant',
     botanicalName: 'Sansevieria trifasciata',
     category: 'succulent',
