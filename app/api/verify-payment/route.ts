@@ -1,63 +1,49 @@
-import { NextResponse } from 'next/server';
-import crypto from 'crypto';
-import { createClient } from '@supabase/supabase-js';
+'use client';
 
-export async function POST(req: Request) {
-  try {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseServiceKey =
-      process.env.SUPABASE_SERVICE_ROLE_KEY ||
-      process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import { CheckCircle2 } from 'lucide-react';
+import { Suspense } from 'react';
 
-    if (!supabaseUrl || !supabaseServiceKey) {
-      console.error('Missing Supabase environment variables');
-      return NextResponse.json(
-        { success: false, message: 'Server configuration error' },
-        { status: 500 }
-      );
-    }
+function OrderSuccessContent() {
+  const searchParams = useSearchParams();
+  const paymentId = searchParams.get('payment_id');
 
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+  return (
+    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 w-full">
+      <div className="flex justify-center mb-4">
+        <CheckCircle2 className="w-16 h-16 text-green-600" />
+      </div>
+      <h1 className="text-3xl font-bold text-gray-800 mb-2">Order Placed Successfully!</h1>
+      <p className="text-gray-600 mb-6">
+        Thank you for shopping with Shree Ram Nursery. Your plant order has been safely received and recorded.
+      </p>
 
-    const { 
-      razorpay_order_id, 
-      razorpay_payment_id, 
-      razorpay_signature,
-      customerDetails,
-      cartItems,
-      totalAmount 
-    } = await req.json();
+      {paymentId && (
+        <div className="bg-gray-50 p-4 rounded-lg mb-6 text-sm text-left border">
+          <p className="text-gray-500 font-medium">Razorpay Payment ID:</p>
+          <p className="font-mono font-semibold text-gray-800 break-all">{paymentId}</p>
+        </div>
+      )}
 
-    const body = razorpay_order_id + '|' + razorpay_payment_id;
+      <div className="flex gap-4 justify-center">
+        <Link
+          href="/catalog"
+          className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+        >
+          Continue Shopping
+        </Link>
+      </div>
+    </div>
+  );
+}
 
-    const expectedSignature = crypto
-      .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET || '')
-      .update(body.toString())
-      .digest('hex');
-
-    if (expectedSignature === razorpay_signature) {
-      // Insert order details into Supabase
-      const { error } = await supabase.from('orders').insert({
-        customer_name: customerDetails.name,
-        phone: customerDetails.phone,
-        address: `${customerDetails.address}, ${customerDetails.city} - ${customerDetails.pincode}`,
-        amount: totalAmount,
-        items: cartItems,
-        razorpay_order_id,
-        razorpay_payment_id,
-      });
-
-      if (error) {
-        console.error('Supabase DB Insert Error:', error);
-      }
-
-      return NextResponse.json({ success: true }, { status: 200 });
-    } else {
-      return NextResponse.json({ success: false, message: 'Invalid signature' }, { status: 400 });
-    }
-  } catch (error) {
-    console.error('Server error:', error);
-    return NextResponse.json({ success: false, message: 'Internal server error' }, { status: 500 });
-  }
+export default function OrderSuccessPage() {
+  return (
+    <div className="max-w-xl mx-auto px-4 py-16 text-center min-h-[60vh] flex items-center justify-center">
+      <Suspense fallback={<div className="text-gray-500">Loading order details...</div>}>
+        <OrderSuccessContent />
+      </Suspense>
+    </div>
+  );
 }
