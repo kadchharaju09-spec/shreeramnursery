@@ -71,14 +71,20 @@ export default function CheckoutPage() {
           const verifyRes = await fetch('/api/verify-payment', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(response),
+            body: JSON.stringify({
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_signature: response.razorpay_signature,
+              customerDetails: formData,   // 👈 Passes name, phone, address, city, pincode
+              cartItems: cart,             // 👈 Passes items purchased
+              totalAmount: totalPrice,     // 👈 Passes total price
+            }),
           });
 
           const verifyData = await verifyRes.json();
           if (verifyRes.ok && verifyData.success) {
-            alert('Payment Successful & Verified!');
             clearCart();
-            router.push('/account');
+            router.push(`/order-success?payment_id=${response.razorpay_payment_id}`);
           } else {
             alert('Payment verification failed. Please contact support.');
           }
